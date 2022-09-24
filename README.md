@@ -83,8 +83,13 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+#### Built With
+
 - [![React][react.js]][react-url]
+- Redux
+- MongoDB
+- Node.js
+- Express.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,24 +99,34 @@
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+#### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 
 - Make a free account with [MongoDB](https://www.mongodb.com/) and create an empty database.
 
-### Installation
+#### Installation
 
 1. Clone the repo
    ```sh
    git clone https://github.com/FitzHawke/mern-app.git
    ```
-2. Install NPM packages
+2. Install NPM packages in root directory and frontend
    ```sh
    npm install
+   cd frontend
+   npm install
    ```
-3. Copy or rename `.env.example` to `.env`
+3. Back to root and copy or rename `.env.example` to `.env`
+   ```sh
+   cd ..
+   mv .env.example .env
+   ```
 4. Fill out .env with your mongoDB URI
+5. Start the dev server from the root directory
+   ```sh
+   npm run dev
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,9 +134,17 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+#### Deployment
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1.  Build the frontend
+    ```sh
+    npm run build
+    ```
+2.  Change the `NODE_ENV` in .env to production.
+3.  Run the server from the root directory
+    ```sh
+    npm run start
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
